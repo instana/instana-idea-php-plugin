@@ -14,7 +14,7 @@ more fun.
 
 Import `build.gradle` as a new project.
 
-`./gradlew runIde` will run a sample IDE for poking aroung
+`./gradlew runIde` will run a sample IDE for poking around
 
 `./gradlew buildPlugin` will build the artifact
 
