@@ -1,0 +1,10 @@
+{
+  "name": "test/app",
+  "type": "project",
+  "description": "My Foo Is your Bar!",
+  "license": "MIT",
+  "require": {
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

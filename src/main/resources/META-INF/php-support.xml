@@ -1,0 +1,18 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.jetbrains.php">
+        <libraryRoot id="instanastubs" path="/instana/" runtime="false"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <intentionAction>
+            <className>com.instana.idea.php.WrapInSpanIntentionAction</className>
+        </intentionAction>
+
+        <!-- Suggest require'ing the instana sdk stubs -->
+        <localInspection language="PHP" groupPath="PHP,Composer"
+                         shortName="ComposerPackageInspection" displayName="Suggested composer packages"
+                         groupName="Composer" enabledByDefault="true" level="WARNING"
+                         implementationClass="com.instana.idea.php.codeInspection.ComposerPackageInspection"/>
+
+    </extensions>
+</idea-plugin>

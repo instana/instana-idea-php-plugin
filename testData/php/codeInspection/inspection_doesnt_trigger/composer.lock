@@ -1,0 +1,51 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "dee4b713b3f0d93f377cce8cf6999448",
+    "packages": [
+        {
+            "name": "instana/instana-php-sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/instana/instana-php-sdk.git",
+                "reference": "247f0b0edc27d1b3f2f631195d33caaf0f225fe6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/instana/instana-php-sdk/zipball/247f0b0edc27d1b3f2f631195d33caaf0f225fe6",
+                "reference": "247f0b0edc27d1b3f2f631195d33caaf0f225fe6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gordon Oheim",
+                    "email": "gordon.oheim@instana.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Instana PHP Trace SDK stubs",
+            "homepage": "http://instana.com",
+            "time": "2019-09-18T13:57:29+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

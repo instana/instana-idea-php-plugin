@@ -1,0 +1,32 @@
+plugins {
+    id 'org.jetbrains.intellij' version '0.4.10'
+    id 'de.undercouch.download' version '4.0.0'
+    id "com.palantir.git-version" version "0.12.0-rc2"
+}
+
+group 'com.instana.idea.php'
+version gitVersion()
+
+intellij {
+    version ideaVersion
+    plugins = [
+            "com.jetbrains.php:${phpPluginVersion}",
+            'java',
+            'java-i18n',
+            'CSS',
+            'properties',
+    ]
+}
+
+patchPluginXml {
+    changeNotes """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}
+
+task downloadInstanaStubs(type: Download) {
+    src "https://raw.githubusercontent.com/instana/instana-php-sdk/${instanaPhpSdkVersion}/instana.php"
+    dest "src/main/resources/instana/instana.php"
+}
+
+compileJava.dependsOn downloadInstanaStubs

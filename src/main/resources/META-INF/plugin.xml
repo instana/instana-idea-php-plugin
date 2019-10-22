@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>com.instana.idea.php</id>
+    <name>Instana Extension Support</name>
+    <vendor email="info@instana.com" url="https://www.instana.com">Instana Inc.</vendor>
+    <description><![CDATA[
+        <h3>0.1</h3>
+        <ul>
+          <li>Initial version with stubs for extension 1.4</li>
+          <li>Wrap method calls in custom trace through code intention</li>
+        </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends optional="true" config-file="php-support.xml">com.jetbrains.php</depends>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
