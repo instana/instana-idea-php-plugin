@@ -1,3 +1,5 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+
 plugins {
     id 'org.jetbrains.intellij' version '0.4.10'
     id 'de.undercouch.download' version '4.0.0'
@@ -42,5 +44,3 @@ task downloadInstanaStubs(type: Download) {
 }
 
 compileJava.dependsOn downloadInstanaStubs
-
-test.testLogging.exceptionFormat = TestExceptionFormat.FULL
