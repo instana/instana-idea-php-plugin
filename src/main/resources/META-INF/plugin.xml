@@ -1,12 +1,16 @@
 <idea-plugin>
     <id>com.instana.idea.php</id>
-    <name>Instana Extension Support</name>
+    <name>Instana Support for PHP</name>
     <vendor email="info@instana.com" url="https://www.instana.com">Instana Inc.</vendor>
     <description><![CDATA[
-        <h3>0.1</h3>
+        <h1>Instana Support for PHP</h1>
+        <p>Tiny plugin for IntelliJ based IDEs to make development with Instana more fun.</p>
+
+        <h2>Features</h2>
         <ul>
-          <li>Initial version with stubs for extension 1.4</li>
-          <li>Wrap method calls in custom trace through code intention</li>
+          <li>Provide SDK stubs directly into the IDE</li>
+          <li>Suggest require'ing our SDK stubs in your composer.json manifest</li>
+          <li>Manually trace calls directly through a code-intention</li>
         </ul>
     ]]></description>
 

@@ -5,7 +5,15 @@ plugins {
 }
 
 group 'com.instana.idea.php'
-version gitVersion()
+
+def details = versionDetails()
+if (details.isCleanTag) {
+    version = "${details.lastTag}"
+} else {
+    version = "${details.lastTag}.${details.gitHash}-SNAPSHOT"
+}
+
+def htmlFixer = { htmlFile -> file(htmlFile).text.replace('<html>', '').replace('</html>', '') }
 
 intellij {
     version ideaVersion
@@ -20,6 +28,12 @@ intellij {
 
 patchPluginXml {
     sinceBuild customSinceBuild
+    changeNotes = htmlFixer('src/main/resources/META-INF/change-notes.html')
+}
+
+publishPlugin {
+    token System.getenv('IJ_REPO_TOKEN')
+    channels 'nightly'
 }
 
 task downloadInstanaStubs(type: Download) {
@@ -28,3 +42,5 @@ task downloadInstanaStubs(type: Download) {
 }
 
 compileJava.dependsOn downloadInstanaStubs
+
+test.testLogging.exceptionFormat = TestExceptionFormat.FULL
