@@ -4,7 +4,7 @@
     <vendor email="info@instana.com" url="https://www.instana.com">Instana Inc.</vendor>
     <description><![CDATA[
         <h1>Instana Support for PHP</h1>
-        <p>Tiny plugin for IntelliJ based IDEs to make development with Instana more fun.</p>
+        <p>A plugin for IntelliJ providing convenient shortcuts when working with the Instana PHP SDK.</p>
 
         <h2>Features</h2>
         <ul>
