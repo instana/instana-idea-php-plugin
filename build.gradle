@@ -8,9 +8,13 @@ plugins {
 
 group 'com.instana.idea.php'
 
+def jenkinsBuildNumber = buildNumber.toInteger()
 def details = versionDetails()
+
 if (details.isCleanTag) {
     version = "${details.lastTag}"
+}else if(jenkinsBuildNumber > 0) {
+    version = "${details.lastTag}.${jenkinsBuildNumber}"
 } else {
     version = "${details.lastTag}.${details.gitHash}-SNAPSHOT"
 }
@@ -28,6 +32,8 @@ intellij {
     ]
 }
 
+buildSearchableOptions.enabled = false
+
 patchPluginXml {
     sinceBuild customSinceBuild
     changeNotes = htmlFixer('src/main/resources/META-INF/change-notes.html')
@@ -35,7 +41,7 @@ patchPluginXml {
 
 publishPlugin {
     token System.getenv('IJ_REPO_TOKEN')
-    channels 'nightly'
+    channels publishChannel
 }
 
 task downloadInstanaStubs(type: Download) {
