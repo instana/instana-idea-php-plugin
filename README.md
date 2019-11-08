@@ -1,7 +1,6 @@
 # Instana Support for IntelliJ based IDEs
 
-Tiny plugin for IntelliJ based IDEs to make development with Instana
-more fun.
+A plugin for IntelliJ providing convenient shortcuts when working with the Instana PHP SDK.
 
 ## Features
 
